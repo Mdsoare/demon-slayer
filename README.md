@@ -1,4 +1,4 @@
-# <img src=./assets/img/logo.svg alt="Logotipo da Alura" title="Logo da Alura" width="7%"> Desvendando os Hashiras: Uma Aventura com JavaScript ⚔️
+# Desvendando os Hashiras: Uma Aventura com JavaScript ⚔️
 
 **Uma aplicação web para fãs de Demon Slayer, criada durante a Imersão Dev com Gemini.**
 
