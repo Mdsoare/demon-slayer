@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Página sobre a imersão em desenvolvimento com Gemini para uma pesquisa em uma base de dados.">
+    <meta name="keywords" content="imersão, desenvolvimento, Gemini, API">
+    <link rel="stylesheet" href="./assets/styles/styles.css">
+    <link rel="shortcut icon" href="./assets/img/favicon.ico">
+    <title>Imerção Dev com Gemini - Alura</title>
+</head>
+
+<body>
+    <header>
+        <h1>Kimetsu no Yaiba</h1>
+    </header>
+    <main>
+        <section>
+            <input type="text" placeholder="Digite o nome do Hashira" id="campo-pesquisa" autocomplete="off">
+            <div>
+                <button onclick="pesquisar()">Pesquisar</button>
+                <button onclick="clean()">Limpar</button>
+            </div>
+        </section>
+
+        <section class="resultados-pesquisa" id="resultados-pesquisa"></section>
+    </main>
+    <footer>
+        <p>
+            2024 - Demon Slayer. Todos os direitos reservados.
+            <a href="https://github.com/Mdsoare" target="_blank" title="Acesse meu GitHub">
+                <img src="assets/img/github.svg" alt='GitHub'>
+            </a>
+            <a href="https://www.linkedin.com/in/marcelodsoares/" target="_blank" title="Acesse meu Linkedin">
+                <img src="assets/img/linkedin.svg" alt='Linkedin'>
+            </a>
+        </p>
+    </footer>
+    <script src="./assets/scripts/dados.js"></script>
+    <script src="./assets/scripts/app.js"></script>
+    <script src="./assets/scripts/enterPesquisa.js"></script>
+    <script src="./assets/scripts/limpaPesquisa.js"></script>
+    <script src="./assets/scripts/escPesquisa.js"></script>
+</body>
+
+</html>
