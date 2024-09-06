@@ -16,6 +16,8 @@ Você é fã de Demon Slayer e quer saber tudo sobre os poderosos Hashiras? Essa
 
 <img src=.//assets/img/screenshot1.png alt="Screenshot de uma pesquisa de exemplo" title="Screenshot de uma pesquisa de exemplo" width="75%">
 
+**Ficou curioso?** Acesse a aplicação no **GitHub Pages** clicando [Aqui](https://mdsoare.github.io/demon-slayer/)
+
 ## Tecnologias utilizadas: 🖥️
 
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://www.w3schools.com/html/default.asp)
