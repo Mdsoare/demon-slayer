@@ -3,7 +3,8 @@ function pesquisar() {
     let campoPesquisa = document.getElementById("campo-pesquisa").value;
 
     // se campoPesquisa for uma string sem nada
-    if (!campoPesquisa || !/^[a-z0-9çáãéêíóôõú]+$/.test(campoPesquisa)) {
+    //if (!campoPesquisa || !/^[a-z0-9çáãéêíóôõú]+$/.test(campoPesquisa)) {
+    if (!campoPesquisa){
         alert("Pesquisa inválida! Você precisa digitar o nome de Hashira");
         //section.innerHTML = "<p>Pesquisa inválida! Você precisa digitar o nome de Hashira</p>"
         clean();
