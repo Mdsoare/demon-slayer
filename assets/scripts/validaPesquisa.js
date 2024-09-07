@@ -1,5 +1,5 @@
 function validarPesquisa(campoPesquisa) {
-    const regex = /^[a-zA-Z0-9çáãéêíóôõú\s]+$/i;
+    const regex = /^[a-zA-Z0-9çáãéêíóôõú]+$/i;
     if (!campoPesquisa) {
         alert("Pesquisa inválida! Você precisa digitar o nome de Hashira");
         return false;
