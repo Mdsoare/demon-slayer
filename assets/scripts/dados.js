@@ -1,4 +1,7 @@
-let dados = [
+/**
+ * Base de dados imutável dos Hashiras.
+ */
+export const dados = Object.freeze([
     {
         titulo: "Giyu Tomioka - Hashira da Água",
         descricao: "Um jovem de aparência séria e cabelos azuis, conhecido por sua natureza reservada. Calmo, direto e leal. Apesar de sua aparência dura, ele possui um forte senso de justiça.",
@@ -8,7 +11,6 @@ let dados = [
         pontosFracos: "Pode parecer indiferente, o que pode afastar as pessoas.",
         tags: "agua"
     },
-
     {
         titulo: "Kyojuro Rengoku - Hashira das Chamas",
         descricao: "Um homem alto e musculoso, com cabelos longos e amarelos, conhecido por seu sorriso radiante. Entusiasta, caloroso e corajoso. Sempre coloca a segurança dos outros em primeiro lugar.",
@@ -18,7 +20,6 @@ let dados = [
         pontosFracos: "Pode ser muito impulsivo e subestimar seus oponentes.",
         tags: "chamas fogo"
     },
-
     {
         titulo: "Shinobu Kocho - Hashira dos Insetos",
         descricao: "Uma jovem elegante e de cabelos roxos, com uma personalidade gentil, mas com uma mente estratégica.",
@@ -28,7 +29,6 @@ let dados = [
         pontosFracos: "Força física limitada, dependência de suas técnicas venenosas.",
         tags: "inseto veneno"
     },
-
     {
         titulo: "Tengen Uzui - Hashira do Som",
         descricao: "Um homem extravagante e confiante, com três esposas ninjas.",
@@ -38,7 +38,6 @@ let dados = [
         pontosFracos: "Pode ser arrogante e subestimar seus oponentes.",
         tags: "som ondas"
     },
-
     {
         titulo: "Mitsuri Kanroji - Hashira do Amor",
         descricao: "Uma jovem de cabelos rosa e corpo musculoso, conhecida por sua gentileza e força.",
@@ -48,7 +47,6 @@ let dados = [
         pontosFracos: "Pode ser muito ingênua e confiar demais nas pessoas.",
         tags: "amor ligacao"
     },
-
     {
         titulo: "Muichiro Tokito - Hashira da Névoa",
         descricao: "Um jovem de cabelos brancos e olhos heterocromáticos, com uma personalidade misteriosa e apática.",
@@ -58,7 +56,6 @@ let dados = [
         pontosFracos: "Memória fraca, pode ser imprevisível.",
         tags: "nevoa"
     },
-
     {
         titulo: "Obanai Iguro - Hashira da Serpente",
         descricao: "Um homem sério e ciumento, com uma cobra como companheira.",
@@ -68,7 +65,6 @@ let dados = [
         pontosFracos: "Pode ser impulsivo e agir por emoção.",
         tags: "serpente veneno cobra"
     },
-
     {
         titulo: "Gyomei Himejima - Hashira da Pedra",
         descricao: "Um homem cego e musculoso, com uma personalidade calma e gentil.",
@@ -78,7 +74,6 @@ let dados = [
         pontosFracos: "Mobilidade limitada devido ao seu tamanho.",
         tags: "pedra"
     },
-
     {
         titulo: "Kanae Kocho - Ex-Hashira das Flores",
         descricao: "A irmã mais velha de Shinobu, conhecida por sua gentileza e compaixão.",
@@ -88,7 +83,6 @@ let dados = [
         pontosFracos: "Faleceu antes dos eventos principais da história.",
         tags: "flor flores"
     },
-
     {
         titulo: "Sakonji Urokodaki - Ex-Hashira da Água",
         descricao: "Um homem idoso e misterioso, mestre de Giyu Tomioka.",
@@ -98,7 +92,6 @@ let dados = [
         pontosFracos: "Idade avançada, não participa mais ativamente de combates.",
         tags: "agua"
     },
-
     {
         titulo: "Jigoro Kuwajima - Ex-Hashira do Trovão",
         descricao: "Pouco se sabe sobre ele.",
@@ -108,5 +101,4 @@ let dados = [
         pontosFracos: "Pouco se sabe sobre suas fraquezas.",
         tags: "trovao"
     }
-
-];
+]);
