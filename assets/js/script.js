@@ -6,13 +6,13 @@ import { dados } from './dados.js';
  * @returns {string}
  */
 function escapeHTML(str) {
-    if (!str) return "";
+    if (!str) return '';
     return String(str)
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#039;");
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
 }
 
 /**
@@ -22,14 +22,14 @@ function escapeHTML(str) {
  * @returns {boolean}
  */
 function validarPesquisa(termo) {
-    if (!termo || termo.trim() === "") {
-        alert("Pesquisa inválida! Você precisa digitar o nome de um Hashira.");
+    if (!termo || termo.trim() === '') {
+        alert('Pesquisa inválida! Você precisa digitar o nome de um Hashira.');
         return false;
     }
 
     const regex = /^[a-zA-Z0-9çáàâãéèêíóôõúÇÁÀÂÃÉÈÊÍÓÔÕÚ\s]+$/;
     if (!regex.test(termo.trim())) {
-        alert("Pesquisa inválida! Utilize apenas letras, números e espaços.");
+        alert('Pesquisa inválida! Utilize apenas letras, números e espaços.');
         return false;
     }
 
@@ -43,9 +43,9 @@ function limparPesquisa() {
     const sectionResultados = document.getElementById('resultados-pesquisa');
     const campoPesquisa = document.getElementById('campo-pesquisa');
 
-    if (sectionResultados) sectionResultados.innerHTML = "";
+    if (sectionResultados) sectionResultados.innerHTML = '';
     if (campoPesquisa) {
-        campoPesquisa.value = "";
+        campoPesquisa.value = '';
         campoPesquisa.focus();
     }
 }
@@ -54,8 +54,8 @@ function limparPesquisa() {
  * Executa a lógica de pesquisa e renderiza os resultados sanitizados.
  */
 function executarPesquisa() {
-    const sectionResultados = document.getElementById("resultados-pesquisa");
-    const campoInput = document.getElementById("campo-pesquisa");
+    const sectionResultados = document.getElementById('resultados-pesquisa');
+    const campoInput = document.getElementById('campo-pesquisa');
     
     if (!campoInput || !sectionResultados) return;
 
@@ -67,13 +67,13 @@ function executarPesquisa() {
     }
 
     const termoBusca = termoOriginal.trim().toLowerCase();
-    let resultadosHTML = "";
+    let resultadosHTML = '';
 
     for (const dado of dados) {
-        const titulo = (dado.titulo || "").toLowerCase();
-        const descricao = (dado.descricao || "").toLowerCase();
-        const golpes = (dado.golpes || "").toLowerCase();
-        const tags = (dado.tags || "").toLowerCase();
+        const titulo = (dado.titulo || '').toLowerCase();
+        const descricao = (dado.descricao || '').toLowerCase();
+        const golpes = (dado.golpes || '').toLowerCase();
+        const tags = (dado.tags || '').toLowerCase();
 
         if (
             titulo.includes(termoBusca) || 
@@ -105,26 +105,26 @@ function executarPesquisa() {
     }
 
     if (!resultadosHTML) {
-        resultadosHTML = "<p>Que pena! Não temos nada associado ao termo digitado!</p>";
+        resultadosHTML = '<p>Que pena! Não temos nada associado ao termo digitado!</p>';
     }
 
     sectionResultados.innerHTML = resultadosHTML;
 }
 
 // Registro centralizado e seguro de ouvintes de evento
-document.addEventListener("DOMContentLoaded", () => {
-    const btnPesquisar = document.getElementById("btn-pesquisar");
-    const btnLimpar = document.getElementById("btn-limpar");
-    const campoPesquisa = document.getElementById("campo-pesquisa");
+document.addEventListener('DOMContentLoaded', () => {
+    const btnPesquisar = document.getElementById('btn-pesquisar');
+    const btnLimpar = document.getElementById('btn-limpar');
+    const campoPesquisa = document.getElementById('campo-pesquisa');
 
     // Eventos de clique
-    if (btnPesquisar) btnPesquisar.addEventListener("click", executarPesquisa);
-    if (btnLimpar) btnLimpar.addEventListener("click", limparPesquisa);
+    if (btnPesquisar) btnPesquisar.addEventListener('click', executarPesquisa);
+    if (btnLimpar) btnLimpar.addEventListener('click', limparPesquisa);
 
     // Evento de tecla 'Enter' no input
     if (campoPesquisa) {
-        campoPesquisa.addEventListener("keypress", (event) => {
-            if (event.key === "Enter") {
+        campoPesquisa.addEventListener('keypress', (event) => {
+            if (event.key === 'Enter') {
                 event.preventDefault();
                 executarPesquisa();
             }
@@ -132,8 +132,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Evento da tecla 'ESC' na página
-    document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape" || event.key === "Esc") {
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' || event.key === 'Esc') {
             limparPesquisa();
         }
     });
