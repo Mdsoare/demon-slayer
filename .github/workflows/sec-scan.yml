@@ -107,14 +107,23 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
 
       - name: Inicializar CodeQL
-        uses: github/codeql-action/init@6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee
+        uses: github/codeql-action/init@db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28
         with:
           languages: javascript-typescript
           queries: security-extended,security-and-quality
           config-file: .github/codeql/codeql-config.yml
 
+      # 🛠️ Passos essenciais para projetos JS/TS:
+      - name: Configurar Node.js para o CodeQL
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: "24"
+
+      - name: Executar Autobuild do CodeQL
+        uses: github/codeql-action/autobuild@db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28
+
       - name: Executar Análise CodeQL
-        uses: github/codeql-action/analyze@6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee
+        uses: github/codeql-action/analyze@db488ddef3bf6cb639b32c2e9a7c0a7ea8271d28
 
   # -------------------------------------------------------------
   # JOB 6: SAST Open Source com Horusec
